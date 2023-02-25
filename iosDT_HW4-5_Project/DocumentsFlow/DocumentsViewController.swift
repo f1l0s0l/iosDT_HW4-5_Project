@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DocumentsViewController.swift
 //  iosDT_HW4-5_Project
 //
 //  Created by Илья Сидорик on 25.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DocumentsViewController: UIViewController {
 
     // MARK: - Properties
     
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .systemGray6
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
@@ -45,6 +46,10 @@ class ViewController: UIViewController {
         self.setupView()
         self.setupConstraint()
     }
+    
+    deinit {
+        print(#function)
+    }
 
     
     // MARK: - Methods
@@ -57,7 +62,7 @@ class ViewController: UIViewController {
     
     private func setupNavigationBar() {
         self.title = "Documents"
-        self.navigationController?.navigationBar.backgroundColor = .systemGray6
+//        self.navigationController?.navigationBar.backgroundColor = .systemGray6
         let rightNavButton = UIBarButtonItem(
             image: UIImage(systemName: "plus"),
             style: .plain,
@@ -97,7 +102,7 @@ class ViewController: UIViewController {
 
     // MARK: - UITableViewDataSource
 
-extension ViewController: UITableViewDataSource {
+extension DocumentsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.documents.count
@@ -106,6 +111,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.backgroundColor = .systemGray5
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = documents[indexPath.row]
         return cell
@@ -117,7 +123,7 @@ extension ViewController: UITableViewDataSource {
 
     // MARK: - UITableViewDataSource
 
-extension ViewController: UITableViewDelegate {
+extension DocumentsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -144,7 +150,7 @@ extension ViewController: UITableViewDelegate {
 
     // MARK: - UIImagePickerControllerDelegate
 
-extension ViewController: UIImagePickerControllerDelegate {
+extension DocumentsViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -168,7 +174,7 @@ extension ViewController: UIImagePickerControllerDelegate {
 
 
 
-extension ViewController: UINavigationControllerDelegate {
+extension DocumentsViewController: UINavigationControllerDelegate {
     
 }
 

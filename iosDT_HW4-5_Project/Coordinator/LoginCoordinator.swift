@@ -8,47 +8,70 @@
 import Foundation
 import UIKit
 
+protocol CoordinatbleLogin: AnyObject {
+    func switchToMainTabBarCoordinator()
+}
+
 final class LoginCoordinator: Coordinatble {
-    private weak var parentCoordinator: Coordinatble?
+    
+    // MARK: - Properties
+
+    private weak var parentCoordinator: CoordinatbleMain?
     
     private var rootViewController: UIViewController
     
-    var childCoordinators: [Coordinatble] = []
+    private(set) var childCoordinators: [Coordinatble] = []
     
     
-    init(rootVuewController: UIViewController, parentCoordinator: Coordinatble ) {
+    // MARK: - Life cycle
+
+    init(rootVuewController: UIViewController, parentCoordinator: CoordinatbleMain? ) {
         self.rootViewController = rootVuewController
         self.parentCoordinator = parentCoordinator
     }
     
     
+    // MARK: - Methods
+
     func start() {
-//        self.rootViewController.willMove(toParent: nil)
-//        self.rootViewController.view.removeFromSuperview()
-//        self.rootViewController.removeFromParent()
+        let checkerPassword = CheckerPassword()
+        let viewModel = LoginViewModel(coordinator: self, checkerPassword: checkerPassword)
+        let loginViewController = LoginViewController(viewModel: viewModel)
+        let loginNavigation = UINavigationController(rootViewController: loginViewController)
         
-        let loginViewController = LoginViewController()
-        let new = UINavigationController(rootViewController: loginViewController)
-        self.rootViewController.addChild(new)
-        new.view.frame = self.rootViewController.view.bounds
-        self.rootViewController.view.addSubview(new.view)
-        new.didMove(toParent: self.rootViewController)
-        self.rootViewController = new
-        loginViewController.coordinator = self
+        self.rootViewController.children[0].willMove(toParent: nil)
+        self.rootViewController.addChild(loginNavigation)
+        loginNavigation.view.frame = self.rootViewController.view.bounds
+        
+        self.rootViewController.transition(
+            from: self.rootViewController.children[0],
+            to: loginNavigation,
+            duration: 0.6,
+            options: [.transitionCrossDissolve, .curveEaseOut],
+            animations: {},
+            completion: {_ in
+                self.rootViewController.children[0].removeFromParent()
+                loginNavigation.didMove(toParent: self.rootViewController)
+            }
+        )
     }
-    
-    func switchToMainTabBarCoordinator() {
-        (self.parentCoordinator as? MainCoordinator)?.switchToMainTabBarCoordinator()
-    }
-    
     
     func addChildCoordinator(_ coordinator: Coordinatble) {
-        ()
+        guard !self.childCoordinators.contains(where: { $0 === coordinator }) else {
+            return
+        }
+        self.childCoordinators.append(coordinator)
     }
     
     func removeChildCoordinator(_ coordinator: Coordinatble) {
-        ()
+        self.childCoordinators.removeAll(where: {$0 === coordinator})
     }
     
+}
+
+extension LoginCoordinator: CoordinatbleLogin {
     
+    func switchToMainTabBarCoordinator() {
+        self.parentCoordinator?.switchToMainTabBar()
+    }
 }

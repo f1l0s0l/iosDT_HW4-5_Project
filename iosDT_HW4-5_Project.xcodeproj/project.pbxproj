@@ -7,23 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A430F0D629AA801D004ED3E9 /* DocumentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430F0D529AA801D004ED3E9 /* DocumentsCoordinator.swift */; };
+		A430F0D829AA802A004ED3E9 /* SetupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430F0D729AA802A004ED3E9 /* SetupCoordinator.swift */; };
+		A430F0DA29AB4901004ED3E9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430F0D929AB4901004ED3E9 /* LoadingViewController.swift */; };
+		A430F0DC29AB7CB8004ED3E9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430F0DB29AB7CB8004ED3E9 /* LoginViewModel.swift */; };
+		A430F0E129ABA831004ED3E9 /* CheckerPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430F0E029ABA831004ED3E9 /* CheckerPassword.swift */; };
 		A4441CD029AA421C0068BD06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CCF29AA421C0068BD06 /* AppDelegate.swift */; };
 		A4441CD229AA421C0068BD06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CD129AA421C0068BD06 /* SceneDelegate.swift */; };
-		A4441CD429AA421C0068BD06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CD329AA421C0068BD06 /* ViewController.swift */; };
+		A4441CD429AA421C0068BD06 /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CD329AA421C0068BD06 /* DocumentsViewController.swift */; };
 		A4441CD929AA421E0068BD06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4441CD829AA421E0068BD06 /* Assets.xcassets */; };
 		A4441CDC29AA421E0068BD06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4441CDA29AA421E0068BD06 /* LaunchScreen.storyboard */; };
 		A4441CE429AA42570068BD06 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CE329AA42560068BD06 /* AlertNotification.swift */; };
+		A4441CE729AA475B0068BD06 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CE629AA475B0068BD06 /* MainCoordinator.swift */; };
+		A4441CE929AA47810068BD06 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CE829AA47810068BD06 /* LoginCoordinator.swift */; };
+		A4441CEB29AA479E0068BD06 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CEA29AA479E0068BD06 /* TabBarCoordinator.swift */; };
+		A4441CED29AA47C40068BD06 /* ProtocolCoordinatble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CEC29AA47C40068BD06 /* ProtocolCoordinatble.swift */; };
+		A4441CEF29AA64700068BD06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CEE29AA64700068BD06 /* TabBarController.swift */; };
+		A4441CF129AA66E30068BD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CF029AA66E30068BD06 /* LoginViewController.swift */; };
+		A4441CF329AA6D2C0068BD06 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4441CF229AA6D2C0068BD06 /* SetupViewController.swift */; };
+		A445F07629AF8D7100433472 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F07529AF8D7100433472 /* FileViewController.swift */; };
+		A4BF03EB29ABE4DF00DBE189 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = A4BF03EA29ABE4DF00DBE189 /* KeychainAccess */; };
+		A4BF03EF29ACE94600DBE189 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BF03EE29ACE94600DBE189 /* DocumentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A430F0D529AA801D004ED3E9 /* DocumentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsCoordinator.swift; sourceTree = "<group>"; };
+		A430F0D729AA802A004ED3E9 /* SetupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCoordinator.swift; sourceTree = "<group>"; };
+		A430F0D929AB4901004ED3E9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		A430F0DB29AB7CB8004ED3E9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A430F0E029ABA831004ED3E9 /* CheckerPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerPassword.swift; sourceTree = "<group>"; };
 		A4441CCC29AA421C0068BD06 /* iosDT_HW4-5_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iosDT_HW4-5_Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4441CCF29AA421C0068BD06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4441CD129AA421C0068BD06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4441CD329AA421C0068BD06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4441CD329AA421C0068BD06 /* DocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
 		A4441CD829AA421E0068BD06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4441CDB29AA421E0068BD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4441CDD29AA421E0068BD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4441CE329AA42560068BD06 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
+		A4441CE629AA475B0068BD06 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A4441CE829AA47810068BD06 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		A4441CEA29AA479E0068BD06 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		A4441CEC29AA47C40068BD06 /* ProtocolCoordinatble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolCoordinatble.swift; sourceTree = "<group>"; };
+		A4441CEE29AA64700068BD06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A4441CF029AA66E30068BD06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A4441CF229AA6D2C0068BD06 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		A445F07529AF8D7100433472 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		A4BF03EE29ACE94600DBE189 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +60,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BF03EB29ABE4DF00DBE189 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A430F0CF29AA7F47004ED3E9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A4441CCF29AA421C0068BD06 /* AppDelegate.swift */,
+				A4441CD129AA421C0068BD06 /* SceneDelegate.swift */,
+				A430F0D929AB4901004ED3E9 /* LoadingViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A430F0D029AA7F55004ED3E9 /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A445F07929AFCB5F00433472 /* Model */,
+				A4441CF029AA66E30068BD06 /* LoginViewController.swift */,
+				A430F0DB29AB7CB8004ED3E9 /* LoginViewModel.swift */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		A430F0D129AA7F76004ED3E9 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				A4441CEE29AA64700068BD06 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		A430F0D229AA7F93004ED3E9 /* DocumentsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A4441CD329AA421C0068BD06 /* DocumentsViewController.swift */,
+				A4BF03EE29ACE94600DBE189 /* DocumentTableViewCell.swift */,
+				A445F07529AF8D7100433472 /* FileViewController.swift */,
+			);
+			path = DocumentsFlow;
+			sourceTree = "<group>";
+		};
+		A430F0D329AA7FAD004ED3E9 /* SetupFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A4441CF229AA6D2C0068BD06 /* SetupViewController.swift */,
+			);
+			path = SetupFlow;
+			sourceTree = "<group>";
+		};
+		A430F0D429AA7FBF004ED3E9 /* PublicModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4441CE329AA42560068BD06 /* AlertNotification.swift */,
+			);
+			path = PublicModel;
+			sourceTree = "<group>";
+		};
 		A4441CC329AA421C0068BD06 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +140,39 @@
 		A4441CCE29AA421C0068BD06 /* iosDT_HW4-5_Project */ = {
 			isa = PBXGroup;
 			children = (
-				A4441CE329AA42560068BD06 /* AlertNotification.swift */,
-				A4441CCF29AA421C0068BD06 /* AppDelegate.swift */,
-				A4441CD129AA421C0068BD06 /* SceneDelegate.swift */,
-				A4441CD329AA421C0068BD06 /* ViewController.swift */,
+				A430F0D429AA7FBF004ED3E9 /* PublicModel */,
+				A430F0CF29AA7F47004ED3E9 /* Application */,
+				A4441CE529AA474B0068BD06 /* Coordinator */,
+				A430F0D129AA7F76004ED3E9 /* TabBarController */,
+				A430F0D029AA7F55004ED3E9 /* LoginFlow */,
+				A430F0D229AA7F93004ED3E9 /* DocumentsFlow */,
+				A430F0D329AA7FAD004ED3E9 /* SetupFlow */,
 				A4441CD829AA421E0068BD06 /* Assets.xcassets */,
 				A4441CDA29AA421E0068BD06 /* LaunchScreen.storyboard */,
 				A4441CDD29AA421E0068BD06 /* Info.plist */,
 			);
 			path = "iosDT_HW4-5_Project";
+			sourceTree = "<group>";
+		};
+		A4441CE529AA474B0068BD06 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A4441CEC29AA47C40068BD06 /* ProtocolCoordinatble.swift */,
+				A4441CE629AA475B0068BD06 /* MainCoordinator.swift */,
+				A4441CE829AA47810068BD06 /* LoginCoordinator.swift */,
+				A4441CEA29AA479E0068BD06 /* TabBarCoordinator.swift */,
+				A430F0D529AA801D004ED3E9 /* DocumentsCoordinator.swift */,
+				A430F0D729AA802A004ED3E9 /* SetupCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A445F07929AFCB5F00433472 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A430F0E029ABA831004ED3E9 /* CheckerPassword.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +191,9 @@
 			dependencies = (
 			);
 			name = "iosDT_HW4-5_Project";
+			packageProductDependencies = (
+				A4BF03EA29ABE4DF00DBE189 /* KeychainAccess */,
+			);
 			productName = "iosDT_HW4-5_Project";
 			productReference = A4441CCC29AA421C0068BD06 /* iosDT_HW4-5_Project.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +222,10 @@
 				Base,
 			);
 			mainGroup = A4441CC329AA421C0068BD06;
+			packageReferences = (
+				A4BF03E829ABE43900DBE189 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				A4BF03E929ABE4DF00DBE189 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = A4441CCD29AA421C0068BD06 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +252,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4441CD429AA421C0068BD06 /* ViewController.swift in Sources */,
+				A4441CE929AA47810068BD06 /* LoginCoordinator.swift in Sources */,
+				A430F0D629AA801D004ED3E9 /* DocumentsCoordinator.swift in Sources */,
+				A430F0DA29AB4901004ED3E9 /* LoadingViewController.swift in Sources */,
+				A4441CD429AA421C0068BD06 /* DocumentsViewController.swift in Sources */,
+				A430F0DC29AB7CB8004ED3E9 /* LoginViewModel.swift in Sources */,
+				A4441CF329AA6D2C0068BD06 /* SetupViewController.swift in Sources */,
+				A430F0E129ABA831004ED3E9 /* CheckerPassword.swift in Sources */,
 				A4441CE429AA42570068BD06 /* AlertNotification.swift in Sources */,
+				A445F07629AF8D7100433472 /* FileViewController.swift in Sources */,
+				A4441CEF29AA64700068BD06 /* TabBarController.swift in Sources */,
+				A4441CEB29AA479E0068BD06 /* TabBarCoordinator.swift in Sources */,
 				A4441CD029AA421C0068BD06 /* AppDelegate.swift in Sources */,
+				A4441CED29AA47C40068BD06 /* ProtocolCoordinatble.swift in Sources */,
+				A430F0D829AA802A004ED3E9 /* SetupCoordinator.swift in Sources */,
+				A4441CE729AA475B0068BD06 /* MainCoordinator.swift in Sources */,
+				A4441CF129AA66E30068BD06 /* LoginViewController.swift in Sources */,
+				A4BF03EF29ACE94600DBE189 /* DocumentTableViewCell.swift in Sources */,
 				A4441CD229AA421C0068BD06 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +475,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4BF03E829ABE43900DBE189 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A4BF03E929ABE4DF00DBE189 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4BF03EA29ABE4DF00DBE189 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4BF03E829ABE43900DBE189 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4441CC429AA421C0068BD06 /* Project object */;
 }

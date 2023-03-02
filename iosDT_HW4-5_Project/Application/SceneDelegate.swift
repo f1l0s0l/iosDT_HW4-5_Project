@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var mainCoordinator: MainCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,11 +21,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let viewController = ViewController()
-        let navController = UINavigationController.init(rootViewController: viewController)
-        window.rootViewController = navController
+        let rootViewController = UIViewController()
+        let mainCoordinator = MainCoordinator(rootViewController: rootViewController)
+        mainCoordinator.start()
+        window.rootViewController = rootViewController
         window.makeKeyAndVisible()
         self.window = window
+        self.mainCoordinator = mainCoordinator
+        
+        // это что бы при перезапуске прилодения пароль сбрасывался
+        // для тестирования нужно
+//        let keychain = Keychain(service: "MyPassword")
+//
+//        do {
+//            try keychain.remove("password")
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

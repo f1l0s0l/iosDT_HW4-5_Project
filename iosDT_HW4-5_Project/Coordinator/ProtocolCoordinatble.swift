@@ -14,3 +14,7 @@ protocol Coordinatble: AnyObject {
     func addChildCoordinator(_ coordinator: Coordinatble)
     func removeChildCoordinator(_ coordinator: Coordinatble)
 }
+
+protocol CoordinatorDismissDelegate: AnyObject {
+    func dismiss()
+}

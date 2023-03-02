@@ -104,7 +104,7 @@ extension SetupViewController: UITableViewDataSource {
             return cell
             
         } else {
-            cell.textLabel?.text = "Сбросить пароль"
+            cell.textLabel?.text = "Изменить пароль"
             return cell
         }
         
@@ -130,9 +130,7 @@ extension SetupViewController: UITableViewDelegate {
             self.coordinator?.switchToLoginCoordinator()
             
         } else {
-            self.coordinator?.switchToLoginCoordinator()
-            let checker = CheckerPassword()
-            checker.removePassword()
+            self.coordinator?.presentLoginFlow()
         }
     }
     

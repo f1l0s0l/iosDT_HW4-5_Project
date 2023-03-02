@@ -29,14 +29,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         self.mainCoordinator = mainCoordinator
         
-        let keychain = Keychain(service: "MyPassword")
+//        let keychain = Keychain(service: "MyPassword")
         
-        do {
-            try keychain.remove("password")
-        } catch {
-            print("Удалить пароль не получилось")
-            print(error.localizedDescription)
-        }
+//        do {
+//            try keychain.remove("password")
+//        } catch {
+//            print("Удалить пароль не получилось")
+//            print(error.localizedDescription)
+//        }
         
     }
 

@@ -71,9 +71,14 @@ final class CheckerPassword {
         }
     }
     
-    func checkPassword(pswrd: String?, completion: @escaping (StateCheckerPassword) -> Void) {
+    func checkPassword(pswrd: String?, isUpatePswrd: Bool = false, completion: @escaping (StateCheckerPassword) -> Void) {
         guard pswrd?.count ?? 0 > 4 else {
             return completion(.error(error: .weakPswrd))
+        }
+        
+        guard !isUpatePswrd else {
+            self.checkNewPassword(pswrd: pswrd, completion: completion)
+            return
         }
         
         if isHavePassword {

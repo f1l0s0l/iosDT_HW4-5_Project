@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 protocol CoordinatbleSetup: AnyObject {
-    func switchToLoginCoordinator() 
+    func switchToLoginCoordinator()
+    func presentLoginFlow()
 }
 
 final class SetupCoordinator: Coordinatble {
@@ -64,5 +65,19 @@ final class SetupCoordinator: Coordinatble {
 extension SetupCoordinator: CoordinatbleSetup {
     func switchToLoginCoordinator() {
         self.parentCoordinator?.switchToLoginCoordinator()
+    }
+    
+    func presentLoginFlow() {
+        let checker = CheckerPassword()
+        let viewModel = LoginViewModel(coordinator: nil, checkerPassword: checker)
+        viewModel.coordinatorDismissDelegate = self
+        let loginViewController = LoginViewController(viewModel: viewModel)
+        self.navigationController.present(loginViewController, animated: true)
+    }
+}
+
+extension SetupCoordinator: CoordinatorDismissDelegate {
+    func dismiss() {
+        self.navigationController.dismiss(animated: true)
     }
 }

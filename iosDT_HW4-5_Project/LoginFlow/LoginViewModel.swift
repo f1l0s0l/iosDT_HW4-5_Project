@@ -30,6 +30,8 @@ final class LoginViewModel {
     
     // MARK: - Public properties
     
+    weak var coordinatorDismissDelegate: CoordinatorDismissDelegate?
+    
     var stateChenged: ((State) -> Void)?
     private(set) var state: State = .initial {
         didSet {
@@ -62,19 +64,26 @@ final class LoginViewModel {
         
         switch action {
         case .didTapLoginButton(let pswrd):
-            self.checkerPassword.checkPassword(pswrd: pswrd) { [weak self] state in
+            
+            let isUpdatePswrd: Bool = (self.coordinator == nil) ? true : false
+            
+            self.checkerPassword.checkPassword(pswrd: pswrd, isUpatePswrd: isUpdatePswrd) { [weak self] state in
                 switch state {
-                    
+
                 case .success:
-                    self?.coordinator?.switchToMainTabBarCoordinator()
-                    
+                    if isUpdatePswrd {
+                        self?.coordinatorDismissDelegate?.dismiss()
+                    } else {
+                        self?.coordinator?.switchToMainTabBarCoordinator()
+                    }
+
                 case .repeatPswrd:
                     self?.state = .repeatPassword
-                    
+
                 case .wrongRepeatPswrd(let error):
                     self?.state = .noHavePassword
                     self?.state = .wrong(text: error.description)
-                    
+
                 case .error(let error):
                     self?.state = .wrong(text: error.description)
                 }
@@ -87,11 +96,18 @@ final class LoginViewModel {
     }
     
     func initConfirugation() {
-        if checkerPassword.isHavePassword {
-            self.state = .havePassword
-        } else {
-            self.state = .noHavePassword
+        guard self.coordinator == nil else {
+            
+            if self.checkerPassword.isHavePassword {
+                self.state = .havePassword
+            } else {
+                self.state = .noHavePassword
+            }
+
+            return
         }
+        
+        self.state = .noHavePassword
     }
-    
+        
 }

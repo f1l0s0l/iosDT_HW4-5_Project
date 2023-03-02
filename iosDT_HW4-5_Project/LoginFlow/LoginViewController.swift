@@ -10,11 +10,6 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    // MARK: - Public properties
-
-    weak var coordinator: Coordinatble?
-    
-    
     // MARK: - Properties
     
     private var viewModel: LoginViewModel
@@ -80,7 +75,7 @@ final class LoginViewController: UIViewController {
     }
     
     deinit {
-        print("loginViewController \(#function)")
+        print("LoginViewController \(#function)")
     }
     
     
@@ -114,7 +109,7 @@ final class LoginViewController: UIViewController {
                 
             case .error:
                 AlertNotification.shared.defaultAlertNotification(text: "Неизвестная ошибка", viewController: self)
-                print("Какая то ошибка!!!")
+                print("Неизвестная ошибка !!!!")
             }
             
         }

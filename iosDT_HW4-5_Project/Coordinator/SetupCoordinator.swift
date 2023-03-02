@@ -20,7 +20,7 @@ final class SetupCoordinator: Coordinatble {
     
     private var navigationController: UINavigationController
     
-    var childCoordinators: [Coordinatble] = []
+    private(set) var childCoordinators: [Coordinatble] = []
     
     
     // MARK: - Life cycle
@@ -43,10 +43,6 @@ final class SetupCoordinator: Coordinatble {
         )
         self.navigationController.tabBarItem = tabBarItem
     }
-    
-//    func switchToLoginCoordinator() {
-//        (self.parentCoordinator as? TabBarCoordinator)?.switchToLoginCoordinator()
-//    }
     
     func addChildCoordinator(_ coordinator: Coordinatble) {
         guard !self.childCoordinators.contains(where: { $0 === coordinator }) else {

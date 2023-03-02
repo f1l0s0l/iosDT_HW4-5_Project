@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class LoginViewModel {
     
     // MARK: - Enum
@@ -51,7 +50,7 @@ final class LoginViewModel {
     }
     
     deinit {
-        print("loginViewModel \(#function)")
+        print("LoginViewModel \(#function)")
     }
     
     

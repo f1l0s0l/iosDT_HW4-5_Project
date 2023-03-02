@@ -17,7 +17,7 @@ final class LoadingViewController: UIViewController {
     }
     
     deinit {
-        print("Удалился загрузочный экран")
+        print("LoadingViewController \(#function)")
     }
     
 }

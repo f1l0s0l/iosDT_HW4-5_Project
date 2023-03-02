@@ -34,7 +34,7 @@ final class SetupViewController: UIViewController {
     
     // MARK: - Life cycle
     
-    init(coordinator: CoordinatbleSetup) {
+    init(coordinator: CoordinatbleSetup?) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
@@ -50,7 +50,7 @@ final class SetupViewController: UIViewController {
     }
     
     deinit {
-        print("setupViewController \(#function)")
+        print("SetupViewController \(#function)")
     }
     
     

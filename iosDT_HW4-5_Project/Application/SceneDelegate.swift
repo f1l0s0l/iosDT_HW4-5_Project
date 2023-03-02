@@ -29,14 +29,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         self.mainCoordinator = mainCoordinator
         
-        let keychain = Keychain(service: "MyPassword")
-        
-        do {
-            try keychain.remove("password")
-        } catch {
-            print("Удалить пароль не получилось")
-            print(error.localizedDescription)
-        }
+        // это что бы при перезапуске прилодения пароль сбрасывался
+        // для тестирования нужно
+//        let keychain = Keychain(service: "MyPassword")
+//
+//        do {
+//            try keychain.remove("password")
+//        } catch {
+//            print(error.localizedDescription)
+//        }
         
     }
 

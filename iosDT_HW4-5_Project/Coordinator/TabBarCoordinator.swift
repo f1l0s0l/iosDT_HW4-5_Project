@@ -35,9 +35,8 @@ final class TabBarCoordinator: Coordinatble {
 
     func start() {
         // По хорошему сделать Factory по созданию Flow
-        // Но это актуально при работе с MVVM (я так понимаю)
-        // когда в Factory инжектяться все зависимости (viewModel и Model)
-        // Ну и в этом тестовом варианте это было бы уже очень круто) и так намаялся с переходами между Flow
+        // После завершения обучения хочу доделать этот проект до  "Конфетки"
+        // Как раз там и внедрю Factory
         
         // Создаем flow Docunets
         let navCont1 = UINavigationController()
